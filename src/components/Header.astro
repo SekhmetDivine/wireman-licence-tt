@@ -1,0 +1,31 @@
+---
+import { CONTACT } from '../config/contact';
+---
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Brand -->
+    <div class="font-bold text-lg text-gray-900">
+      Wireman Licence TT
+    </div>
+
+    <!-- CTA buttons -->
+    <div class="flex gap-2">
+      <a
+        href={`tel:${CONTACT.phoneE164}`}
+        class="px-4 py-2 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 transition"
+      >
+        Call
+      </a>
+
+      <a
+        href={CONTACT.whatsappLink}
+        target="_blank"
+        rel="noopener"
+        class="px-4 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition"
+      >
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
