@@ -1,11 +1,152 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { CONTACT } from '../config/contact';
 ---
 
 <Layout>
-  <main class="flex min-h-screen items-center justify-center">
-    <h1 class="text-5xl font-bold text-red-600">
-      Tailwind is working ✅
-    </h1>
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden">
+      <!-- Subtle background -->
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute -top-24 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-red-200/40 blur-3xl"></div>
+        <div class="absolute bottom-[-6rem] right-[-6rem] h-72 w-72 rounded-full bg-yellow-200/40 blur-3xl"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 pt-14 pb-10 sm:pt-20 sm:pb-14">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-4 py-2 text-sm text-gray-700 shadow-sm">
+            <span class="h-2 w-2 rounded-full bg-green-500"></span>
+            Now enrolling in Trinidad and Tobago
+          </p>
+
+          <h1 class="mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900">
+            Wireman’s Licence
+            <span class="block text-red-600">Preparation Classes</span>
+          </h1>
+
+          <p class="mt-5 text-lg sm:text-xl leading-relaxed text-gray-700">
+            Conducted by <span class="font-semibold text-gray-900">Marlon Williams</span>, former Chief Electrical Inspector and Electrical Engineer.
+            Build confidence, pass the exam, and become licensed.
+          </p>
+
+          <!-- CTAs -->
+          <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+            <a
+              href={`tel:${CONTACT.phoneE164}`}
+              class="inline-flex items-center justify-center rounded-xl bg-red-600 px-6 py-3 text-white font-semibold shadow-sm hover:bg-red-700 transition focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+              aria-label={`Call ${CONTACT.phoneDisplay}`}
+            >
+              Call {CONTACT.phoneDisplay}
+            </a>
+
+            <a
+              href={CONTACT.whatsappLink}
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center justify-center rounded-xl bg-green-600 px-6 py-3 text-white font-semibold shadow-sm hover:bg-green-700 transition focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              aria-label="Open WhatsApp chat"
+            >
+              WhatsApp Now
+            </a>
+
+            <a
+              href="#details"
+              class="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-900 hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+            >
+              View Details
+            </a>
+          </div>
+
+          <!-- Trust line -->
+          <p class="mt-6 text-sm text-gray-600">
+            Clear guidance, practical examples, and exam-focused preparation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST / CREDIBILITY STRIP -->
+    <section id="details" class="border-y border-gray-200 bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-10">
+        <div class="grid gap-6 sm:grid-cols-3">
+          <div class="rounded-2xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-sm font-semibold text-gray-900">Instructor</p>
+            <p class="mt-2 text-gray-700">
+              Former <span class="font-semibold">Chief Electrical Inspector</span> and Electrical Engineer.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-sm font-semibold text-gray-900">Outcome</p>
+            <p class="mt-2 text-gray-700">
+              Strengthen your competency in wiring installations and exam readiness.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-sm font-semibold text-gray-900">Next Step</p>
+            <p class="mt-2 text-gray-700">
+              Contact us to confirm schedule, requirements, and available spots.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK INFO -->
+    <section class="bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 py-14">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">
+            Be licensed and be independent
+          </h2>
+          <p class="mt-3 text-gray-700">
+            Get clear, structured preparation designed to help you succeed.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-gray-200">
+            <p class="text-sm font-semibold text-gray-900">Exam Focus</p>
+            <p class="mt-2 text-gray-700">
+              Topics explained in a simple, step-by-step way with practical context.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-gray-200">
+            <p class="text-sm font-semibold text-gray-900">Professional Standard</p>
+            <p class="mt-2 text-gray-700">
+              Learn best practices aligned with electrical safety and proper workmanship.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-gray-200">
+            <p class="text-sm font-semibold text-gray-900">Support</p>
+            <p class="mt-2 text-gray-700">
+              Ask questions, clarify weak areas, and build confidence before exam day.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 flex justify-center gap-3">
+          <a
+            href={`tel:${CONTACT.phoneE164}`}
+            class="rounded-xl bg-red-600 px-6 py-3 text-white font-semibold hover:bg-red-700 transition focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+          >
+            Call {CONTACT.phoneDisplay}
+          </a>
+
+          <a
+            href={CONTACT.whatsappLink}
+            target="_blank"
+            rel="noopener"
+            class="rounded-xl bg-green-600 px-6 py-3 text-white font-semibold hover:bg-green-700 transition focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
