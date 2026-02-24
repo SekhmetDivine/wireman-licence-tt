@@ -26,7 +26,7 @@ import { CONTACT } from '../config/contact';
           </h1>
 
           <p class="mt-5 text-lg sm:text-xl leading-relaxed text-gray-700">
-            Conducted by <span class="font-semibold text-gray-900">Marlon Williams</span>, former Chief Electrical Inspector and Electrical Engineer.
+            Conducted by <span class="font-semibold text-gray-900">Marlon Williams</span>, retired Chief Electrical Inspector and Electrical Engineer.
             Build confidence, pass the exam, and become licensed.
           </p>
 
@@ -56,6 +56,13 @@ import { CONTACT } from '../config/contact';
             >
               View Details
             </a>
+
+            <a
+              href="#instructor"
+              class="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-900 hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+            >
+              Meet Your Instructor
+            </a>
           </div>
 
           <!-- Trust line -->
@@ -80,7 +87,7 @@ import { CONTACT } from '../config/contact';
           <div class="rounded-2xl border border-gray-200 p-6 shadow-sm">
             <p class="text-sm font-semibold text-gray-900">Outcome</p>
             <p class="mt-2 text-gray-700">
-              Strengthen your competency in wiring installations and exam readiness.
+              Strengthen your competency in electrical wiring standards and wireman exam readiness.
             </p>
           </div>
 
@@ -93,6 +100,112 @@ import { CONTACT } from '../config/contact';
         </div>
       </div>
     </section>
+
+    <!-- INSTRUCTOR SPOTLIGHT -->
+    <section id="instructor" class="bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-14 sm:py-16">
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <!-- Photo -->
+          <div class="lg:col-span-5">
+            <div class="relative mx-auto w-full max-w-md">
+              <div class="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-red-100 via-white to-yellow-100 blur-xl"></div>
+
+              <div class="overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm">
+                <!-- Replace src with your real photo path -->
+                <img
+                  src="/marlon-williams.jpg"
+                  alt="Marlon Williams"
+                  class="h-[360px] w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+              <p class="mt-3 text-center text-xs text-gray-500">
+                Instructor
+              </p>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="lg:col-span-7">
+            <p class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-gray-700">
+              <span class="h-2 w-2 rounded-full bg-red-600"></span>
+              Instructor Spotlight
+            </p>
+
+            <h2 class="mt-5 text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
+              Learn from a certified professional with real inspection and engineering experience
+            </h2>
+
+            <p class="mt-4 text-lg leading-relaxed text-gray-700">
+              Classes are conducted by <span class="font-semibold text-gray-900">Marlon Williams</span>, 
+              retired Chief Electrical Inspector, Electrical Engineer, Licensed Wireman and Registered engineer with the Board of
+              Engineering of Trinidad and Tobago. The focus is practical, exam-aligned training that builds confidence and 
+              helps you meet wireman licensing requirements.
+            </p>
+
+            <!-- Credentials -->
+            <div class="mt-7 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                <p class="text-sm font-semibold text-gray-900">Credentials</p>
+                <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                  <li class="flex gap-2">
+                    <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-green-600"></span>
+                    Retired Chief Electrical Inspector
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-green-600"></span>
+                    Electrical Engineer
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-green-600"></span>
+                    Licensed Wireman
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-green-600"></span>
+                    Registered Engineer with Board of Engineers of Trinidad and Tobago
+                  </li>
+                </ul>
+              </div>
+
+              <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                <p class="text-sm font-semibold text-gray-900">Why these classes</p>
+                <p class="mt-3 text-sm leading-relaxed text-gray-700">
+                  The goal is to help serious candidates pass confidently by explaining concepts clearly,
+                  showing practical examples, and training you to answer exam questions correctly under time.
+                </p>
+              </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a
+                href={`tel:${CONTACT.phoneE164}`}
+                class="inline-flex items-center justify-center rounded-xl bg-red-600 px-6 py-3 text-white font-semibold shadow-sm hover:bg-red-700 transition focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                aria-label={`Call ${CONTACT.phoneDisplay}`}
+              >
+                Call {CONTACT.phoneDisplay}
+              </a>
+
+              <a
+                href={CONTACT.whatsappLink}
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center justify-center rounded-xl bg-green-600 px-6 py-3 text-white font-semibold shadow-sm hover:bg-green-700 transition focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                aria-label="Open WhatsApp chat"
+              >
+                WhatsApp Now
+              </a>
+            </div>
+
+            <p class="mt-4 text-xs text-gray-500">
+              Tip: keep your phone and WhatsApp CTAs repeated every 1–2 scroll lengths for mobile conversions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- QUICK INFO -->
     <section class="bg-gray-50">
@@ -110,14 +223,14 @@ import { CONTACT } from '../config/contact';
           <div class="rounded-2xl bg-white p-6 shadow-sm border border-gray-200">
             <p class="text-sm font-semibold text-gray-900">Exam Focus</p>
             <p class="mt-2 text-gray-700">
-              Topics explained in a simple, step-by-step way with practical context.
+              Topics explained in a simple, step-by-step way with practical examples.
             </p>
           </div>
 
           <div class="rounded-2xl bg-white p-6 shadow-sm border border-gray-200">
-            <p class="text-sm font-semibold text-gray-900">Professional Standard</p>
+            <p class="text-sm font-semibold text-gray-900">Technical Standards</p>
             <p class="mt-2 text-gray-700">
-              Learn best practices aligned with electrical safety and proper workmanship.
+              Learn best practices aligned with electrical standards used in Trinidad and Tobago.
             </p>
           </div>
 
